@@ -32,6 +32,7 @@ function App() {
 					setIsRunning(false)
 					setIsDisabled(true)
 					setIsWrong(s.inp)
+					setInpValue('')
 				  }
 			  }, 1000)
 			  return () => clearInterval(intervalId)
@@ -110,6 +111,7 @@ function App() {
 		setIsDisabled(false) // Делает активным инпут
 		setIsRunning(false) // Останавливает счетчик
 		setIsWrong(s.inp) // Убирает фон неправильного ответа в инпуте
+		setInpValue('') // Очищает инпут
 		const input = document.querySelector('input') // Убирает фокус с инпута
 		input.blur()
 	}
