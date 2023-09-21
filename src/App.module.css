@@ -1,0 +1,30 @@
+
+.wrapper{
+    max-width: 1200px;
+    border: 4px solid firebrick;
+    padding: 20px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+h1{
+    color: firebrick;
+}
+
+p{
+    line-height: 150%;
+}
+
+.inp{
+    font-size: 14px;
+    border: 2px solid gray;
+    border-radius: 3px;
+    padding: 5px;
+}
+.active{
+    font-size: 14px;
+    border: 2px solid gray;
+    border-radius: 3px;
+    padding: 5px;
+    background-color: #ff0000ac;
+}
