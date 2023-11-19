@@ -20,6 +20,7 @@ function App() {
 	const [count, setCount] = useState('')
 	const [isRunning, setIsRunning] = useState(false)
 	const [isDisabled, setIsDisabled] = useState(false)
+	const [sum, setSum] = useState(0)
 	
 	useEffect(() => {
 		if(isRunning) {
@@ -72,7 +73,6 @@ function App() {
 			input.blur()
 		}
 	}
-
 	function pressEnter(event) {
 		if(event.key === 'Enter') {
 			if(inpValue.trim().toLocaleLowerCase() === item[indexArr]) {
@@ -80,6 +80,7 @@ function App() {
 				copy.splice(indexArr, 1)
 				setItem(copy)
 				setIsWrong(s.inp)
+				setSum(sum + 1)
 			} 
 			if(inpValue.trim().toLocaleLowerCase() !== item[indexArr]) {
 				setIsWrong(s.active)
@@ -136,7 +137,10 @@ function App() {
 					onChange={event => handleInput(event)} 
 					onKeyDown={event => pressEnter(event)}
 					disabled={isDisabled}
-			/>
+			/> <br/><br/>
+			<div>
+				{sum} из {initArr.length}
+			</div>
 			<p>
 				{result} {count}
 			</p>
